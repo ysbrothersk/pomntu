@@ -5,8 +5,9 @@
         <span>{{appName}}</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn flat v-bind:href=gitHubUrl target="_blank">
-        <span class="mr-2">GITHUB</span>
+      <v-btn flat v-bind:href="gitHubUrl" target="_blank">
+        <img :src="require('./assets/GitHub-Mark-32px.png')" height="20px">
+        <span class="mr-2 ml-1">GITHUB</span>
       </v-btn>
     </v-toolbar>
 
@@ -16,7 +17,7 @@
 
     <v-footer class="pa-3">
       <v-spacer></v-spacer>
-      <span>created by {{author}}</span>
+      <span class="mr-2">created by {{author}} @{{date}}</span>
     </v-footer>
   </v-app>
 </template>
@@ -33,6 +34,7 @@ export default {
     return {
       appName: "pomntu",
       author: "ysbrothersk",
+      date: "2019",
       gitHubUrl: "https://github.com/ysbrothersk/pomntu"
     };
   }
