@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  pomntu:
+    build: .
+    container_name: pomntu
+    ports: 
+      - "8080:8080"
+    volumes: 
+      - .:/app
+      - /app/node_modules
