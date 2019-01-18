@@ -7,7 +7,7 @@
       <v-spacer></v-spacer>
       <v-btn flat v-bind:href="gitHubUrl" target="_blank">
         <img :src="require('./assets/GitHub-Mark-32px.png')" height="20px">
-        <span class="mr-2 ml-1">GITHUB</span>
+        <span class="mr-2 ml-1">GitHub</span>
       </v-btn>
     </v-toolbar>
 

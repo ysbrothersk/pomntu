@@ -6,6 +6,11 @@
         v-on:click="onClickPomntuBtn()"
       >{{time}}</v-btn>
     </v-flex>
+    <v-flex xs12 class="text-xs-center mt-2">
+      <v-btn flat
+        color="green"
+        class="text-xs-center">Done</v-btn>
+    </v-flex>
   </v-layout>
 </template>
 
@@ -15,11 +20,12 @@ let job;
 const State = {
   standby: 1,
   running: 2,
-  done: 3
+  stop: 3,
+  done: 4
 }
 
 const mill25min = 1500000
-const mill5min = 300000
+// const mill5min = 300000
 
 export default {
   name: "Top",
@@ -45,7 +51,6 @@ export default {
       switch (this.state) {
         case State.standby: {
           this.state = State.running;
-
           job = setInterval(() => {
             this.millTime = this.millTime - 1000;
           }, 1000);
@@ -53,19 +58,15 @@ export default {
           break;
         }
         case State.running: {
-          this.state = State.done;
+          this.state = State.stop;
           clearInterval(job);
-          this.millTime = mill5min
-
+          break;
+        }
+        case State.stop: {
+          this.state = State.running;
           job = setInterval(() => {
-            if (this.millTime === 0) {
-              this.state = State.standby;
-              clearInterval(job)
-              this.millTime = mill25min;
-              return;
-            }
             this.millTime = this.millTime - 1000;
-          }, 1000)
+          }, 1000);
           break;
         }
         case State.done: {
