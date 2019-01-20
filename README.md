@@ -1,6 +1,18 @@
 # pomntu
 
-## Project setup
+## 公開先
+https://yasukotelin.github.io/pomntu/
+
+※ Github Pagesにて公開中！
+
+## 技術
+
+- Vue.js
+- Vuetify
+
+## 開発
+
+### プロジェクトセットアップ
 ```
 npm install
 ```
