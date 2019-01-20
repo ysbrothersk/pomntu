@@ -7,9 +7,12 @@
       >{{time}}</v-btn>
     </v-flex>
     <v-flex xs12 class="text-xs-center mt-2">
-      <v-btn flat
+      <v-btn 
+        flat
         color="green"
-        class="text-xs-center">Done</v-btn>
+        class="text-xs-center"
+        v-show="state == StateDefine.running || state == StateDefine.stop"
+        v-on:click="done()">Done</v-btn>
     </v-flex>
   </v-layout>
 </template>
@@ -25,13 +28,14 @@ const State = {
 }
 
 const mill25min = 1500000
-// const mill5min = 300000
+const mill5min = 300000
 
 export default {
   name: "Top",
   data() {
     return {
       millTime: mill25min, // 25min(mill seconds)
+      StateDefine: State,
       state: State.standby
     };
   },
@@ -50,32 +54,57 @@ export default {
     onClickPomntuBtn: function() {
       switch (this.state) {
         case State.standby: {
-          this.state = State.running;
-          job = setInterval(() => {
-            this.millTime = this.millTime - 1000;
-          }, 1000);
-
+          // standby -> running
+          this.running();
           break;
         }
         case State.running: {
-          this.state = State.stop;
-          clearInterval(job);
+          // running -> Stop
+          this.stop();
           break;
         }
         case State.stop: {
-          this.state = State.running;
-          job = setInterval(() => {
-            this.millTime = this.millTime - 1000;
-          }, 1000);
+          // stop -> runnning
+          this.running();
           break;
         }
         case State.done: {
-          this.state = State.standby;
-          clearInterval(job)
-          this.millTime = mill25min;
+          this.standby();
           break;
         }
       }
+    },
+    standby: function() {
+      this.state = State.standby;
+      clearInterval(job)
+      this.millTime = mill25min;
+    },
+    running: function() {
+      this.state = State.running;
+      clearInterval(job);
+      job = setInterval(() => {
+        if (this.millTime === 0) {
+          this.done();
+        } else {
+          this.millTime = this.millTime - 1000;
+        }
+      }, 1000);
+    },
+    stop: function() {
+      this.state = State.stop;
+      clearInterval(job);
+    },
+    done: function() {
+      this.state = State.done;
+      clearInterval(job);
+      this.millTime = mill5min;
+      job = setInterval(() => {
+        if (this.millTime === 0) {
+          this.standby();
+        } else {
+          this.millTime = this.millTime - 1000;
+        }
+      }, 1000);
     }
   }
 };
