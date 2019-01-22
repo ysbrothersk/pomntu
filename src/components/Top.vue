@@ -30,6 +30,29 @@ const State = {
 const mill25min = 1500000
 const mill5min = 300000
 
+function notifyDone() {
+  new Notification("Done!", {
+    body: "Finished active time.",
+    // TODO: アプリアイコンにする
+    icon: require("../assets/logo.png")
+  });
+}
+
+function notifyPermissionGranted() {
+  new Notification("Notification Accept!", {
+    // TODO: アプリアイコンにする
+    icon: require("../assets/logo.png")
+  });
+}
+
+function requestNotifiPermission() {
+  if (window.Notification) {
+    if (Notification.permission === 'default' || Notification.permission === 'denied') {
+      Notification.requestPermission( () => notifyPermissionGranted());
+    }
+  }
+}
+
 export default {
   name: "Top",
   data() {
@@ -38,6 +61,9 @@ export default {
       StateDefine: State,
       state: State.standby
     };
+  },
+  created: function() {
+    requestNotifiPermission();
   },
   computed: {
     time: function() {
@@ -96,6 +122,7 @@ export default {
     },
     done: function() {
       this.state = State.done;
+      notifyDone();
       clearInterval(job);
       this.millTime = mill5min;
       job = setInterval(() => {
