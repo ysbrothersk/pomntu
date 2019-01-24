@@ -33,9 +33,9 @@ export default {
   data() {
     return {
       appName: "pomntu",
-      author: "ysbrothersk",
+      author: "yasukotelin",
       date: "2019",
-      gitHubUrl: "https://github.com/ysbrothersk/pomntu"
+      gitHubUrl: "https://github.com/yasukotelin/pomntu"
     };
   }
 };
