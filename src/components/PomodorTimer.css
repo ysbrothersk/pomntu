@@ -1,0 +1,10 @@
+.pomodor-time {
+    width: 150px;
+    height: 150px;
+}
+
+Button {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
