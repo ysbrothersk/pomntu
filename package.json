@@ -2,6 +2,7 @@
   "name": "pomntu",
   "version": "0.3.0",
   "private": true,
+  "homepage": "http://yasukotelin.github.io/pomntu",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@types/jest": "24.0.11",
@@ -19,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,6 +34,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@types/react-router-dom": "^4.3.1"
+    "@types/react-router-dom": "^4.3.1",
+    "gh-pages": "^2.0.1"
   }
 }
