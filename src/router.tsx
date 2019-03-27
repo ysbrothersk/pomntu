@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, BrowserRouter } from "react-router-dom";
 import {App} from './App';
 import {MuiThemeProvider} from '@material-ui/core/styles'
 import {theme} from './theme'
@@ -10,9 +10,9 @@ export class AppRouter extends Component {
         return (
             <MuiThemeProvider theme={theme} >
                 <Header></Header>
-                <Router>
+                <BrowserRouter basename={process.env.PUBLIC_URL}>
                     <Route exact path='/' component={App}></Route>
-                </Router>
+                </BrowserRouter>
             </MuiThemeProvider>
         )
     }
