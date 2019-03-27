@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "e77253ffb3db40aa211e",
+    "revision": "d051b21b73c787adc5d3",
     "url": "/pomntu/static/css/main.3e36c3d9.chunk.css"
   },
   {
-    "revision": "e77253ffb3db40aa211e",
-    "url": "/pomntu/static/js/main.90457271.chunk.js"
+    "revision": "d051b21b73c787adc5d3",
+    "url": "/pomntu/static/js/main.3ff912c4.chunk.js"
   },
   {
     "revision": "ea6dc551dd014b3437a5",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/pomntu/static/js/2.dcca7552.chunk.js"
   },
   {
-    "revision": "ab32eb27d1fa49577a8b21eb8da9a8b2",
+    "revision": "55d9afd09c0b3f089f54e49c16bdd541",
     "url": "/pomntu/index.html"
   }
 ];

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/pomntu/precache-manifest.02bd06aeb9a96c4ef9dab06eac2ad658.js"
+  "/pomntu/precache-manifest.9818ba400797c25b051d284b1cbb201f.js"
 );
 
 workbox.clientsClaim();
