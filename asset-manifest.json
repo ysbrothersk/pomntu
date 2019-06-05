@@ -1,13 +1,15 @@
 {
-  "main.css": "/pomntu/static/css/main.3e36c3d9.chunk.css",
-  "main.js": "/pomntu/static/js/main.3ff912c4.chunk.js",
-  "main.js.map": "/pomntu/static/js/main.3ff912c4.chunk.js.map",
-  "runtime~main.js": "/pomntu/static/js/runtime~main.538a187b.js",
-  "runtime~main.js.map": "/pomntu/static/js/runtime~main.538a187b.js.map",
-  "static/js/2.dcca7552.chunk.js": "/pomntu/static/js/2.dcca7552.chunk.js",
-  "static/js/2.dcca7552.chunk.js.map": "/pomntu/static/js/2.dcca7552.chunk.js.map",
-  "index.html": "/pomntu/index.html",
-  "precache-manifest.9818ba400797c25b051d284b1cbb201f.js": "/pomntu/precache-manifest.9818ba400797c25b051d284b1cbb201f.js",
-  "service-worker.js": "/pomntu/service-worker.js",
-  "static/css/main.3e36c3d9.chunk.css.map": "/pomntu/static/css/main.3e36c3d9.chunk.css.map"
+  "files": {
+    "main.css": "/pomntu/static/css/main.be601951.chunk.css",
+    "main.js": "/pomntu/static/js/main.6563cd94.chunk.js",
+    "main.js.map": "/pomntu/static/js/main.6563cd94.chunk.js.map",
+    "runtime~main.js": "/pomntu/static/js/runtime~main.538a187b.js",
+    "runtime~main.js.map": "/pomntu/static/js/runtime~main.538a187b.js.map",
+    "static/js/2.dcca7552.chunk.js": "/pomntu/static/js/2.dcca7552.chunk.js",
+    "static/js/2.dcca7552.chunk.js.map": "/pomntu/static/js/2.dcca7552.chunk.js.map",
+    "index.html": "/pomntu/index.html",
+    "precache-manifest.b961ca6309727590a1cb7022c7df3c00.js": "/pomntu/precache-manifest.b961ca6309727590a1cb7022c7df3c00.js",
+    "service-worker.js": "/pomntu/service-worker.js",
+    "static/css/main.be601951.chunk.css.map": "/pomntu/static/css/main.be601951.chunk.css.map"
+  }
 }
