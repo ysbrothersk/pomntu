@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/pomntu/precache-manifest.b961ca6309727590a1cb7022c7df3c00.js"
+  "/pomntu/precache-manifest.786692702929d4b023add598bba35fe8.js"
 );
 
 self.addEventListener('message', (event) => {

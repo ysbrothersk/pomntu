@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7f7c5ba1abbfc233aa9b58a729973e68",
+    "revision": "3daea113b94d8377f498c7f11f4dd886",
     "url": "/pomntu/index.html"
   },
   {
-    "revision": "1755b10fb00a43bb6e1a",
+    "revision": "24abeafa87e8b5d2daa9",
     "url": "/pomntu/static/css/main.be601951.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pomntu/static/js/2.dcca7552.chunk.js"
   },
   {
-    "revision": "1755b10fb00a43bb6e1a",
-    "url": "/pomntu/static/js/main.6563cd94.chunk.js"
+    "revision": "24abeafa87e8b5d2daa9",
+    "url": "/pomntu/static/js/main.135b906c.chunk.js"
   },
   {
     "revision": "ea6dc551dd014b3437a5",
